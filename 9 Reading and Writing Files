@@ -1,3 +1,5 @@
+#https://automatetheboringstuff.com/2e
+
 from pathlib import Path
 
 Path('spam', 'bacon', 'eggs')
@@ -33,4 +35,20 @@ os.makedirs('C:\\delicious\\walnut\\waffles')
 from pathlib import Path
 Path(r'C:\Users\Al\spam').mkdir()
 
-## Handling Absolute and Relative Paths
+# Handling Absolute and Relative Paths
+Path.cwd().is_absolute()
+Path('spam/bacon/eggs'). is_absolute()
+
+    #To get an absolute path from a relative path, you can put Path.cwd() / in front of the relative Path object. 
+Path.cwd() /Path('my/relative/path')
+Path.home() /Path('my/relative/path')
+
+#-------
+import os
+os.path.abspath('.')
+os.path.abspath('.\\scripts')
+os.path.isabs('.')
+os.path.isabs(os.path.abspath('.'))
+os.path.relpath('C:\\windows','C:\\')
+
+##Getting the Parts of a File Path
