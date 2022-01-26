@@ -1,5 +1,9 @@
-#https://automatetheboringstuff.com/2e
+# https://automatetheboringstuff.com/2e
+from pathlib import Path
+import os
 
+
+###
 from pathlib import Path
 
 Path('spam', 'bacon', 'eggs')
@@ -52,3 +56,27 @@ os.path.isabs(os.path.abspath('.'))
 os.path.relpath('C:\\windows','C:\\')
 
 ##Getting the Parts of a File Path
+
+p=Path('C:/Users/Al/spam.txt')
+p.anchor
+p.parent
+p.name
+p.stem
+p.suffix
+p.drive
+
+Path.cwd()
+Path.cwd().parents[0]
+Path.cwd().parents[1]
+
+calcFilePath = 'C:\\Windows\\System32\\calc.exe'
+os.path.basename(calcFilePath)
+os.path.dirname(calcFilePath)
+
+
+calcFilePath = 'C:\\Windows\\System32\\calc.exe'
+os.path.split(calcFilePath)
+calcFilePath.split(os.sep)
+'\\usr\\bin'.split(os.sep)
+
+##Finding File Sizes and Folder Contents
