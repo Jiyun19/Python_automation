@@ -80,3 +80,14 @@ calcFilePath.split(os.sep)
 '\\usr\\bin'.split(os.sep)
 
 ##Finding File Sizes and Folder Contents
+
+os.path.getsize('C:\\Windows\\System32\\calc.exe')
+os.listdir('C:\\Windows\\System32')
+
+##
+totalSize=0
+for filename in os.listdir('C:\\Windows\\System32'):
+    totalSize =totalSize +os.path.getsize(os.path.join('C:\\Windows\\System32',filename))
+print(totalSize)
+
+##Modifying a List of Files Using Glob Patterns
