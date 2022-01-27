@@ -91,3 +91,15 @@ for filename in os.listdir('C:\\Windows\\System32'):
 print(totalSize)
 
 ##Modifying a List of Files Using Glob Patterns
+
+p = Path('C:/Users/jiyun/Desktop')
+list(p.glob('*'))
+list(p.glob('*.txt'))
+##the question mark (?) stands for any single character:
+list(p.glob('탐구_모형?.html'))
+list(p.glob('*.?tm?'))
+
+for textFilePathObj in p.glob('*.txt'):
+    print(textFilePathObj)
+
+##Checking Path Validity
