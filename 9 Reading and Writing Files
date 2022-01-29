@@ -103,3 +103,20 @@ for textFilePathObj in p.glob('*.txt'):
     print(textFilePathObj)
 
 ##Checking Path Validity
+
+winDir=Path('c:/Windows')
+notExistsDir=Path('C:/This/Folder/Does/Not/Exist')
+calcFile = Path('C:/Windows/System32/calc.exe')
+
+winDir.exists()
+notExistsDir.exists()
+
+winDir.is_dir()
+calcFile.is_dir()
+calcFile.is_file()
+
+
+dDrive = Path('D:/')
+dDrive.exists()
+
+##The File Reading/Writing Process
